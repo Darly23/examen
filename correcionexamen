@@ -1,0 +1,123 @@
+funcion triangulo_estrella()
+	definir n,i,j Como Entero
+	n=5
+	Para i<-1 Hasta n  Hacer
+		Para j<-1 Hasta i  Hacer
+			Escribir "*"sin saltar 
+		Fin Para
+		escribir"*"//error en la linea
+	Fin Para
+	escribir "error en la linea 8 "
+	esperar 3 segundos 
+FinFuncion
+
+
+funcion expresion()
+	definir a,b,x como entero 
+	a=2 ;b=5
+	x=a+a*(a+b)-b*a+(trunc(b/3)-2+a*a mod 2)
+	escribir x
+FinFuncion
+
+
+Funcion presentar()
+	definir n,m,r Como Entero
+	n=15;m=19;r=1
+	Mientras (r<>0) Hacer
+		r= m mod n
+		si(r=0)Entonces
+			escribir"m= ",m,"n= ",n
+		SiNo
+			n=m
+			m=r
+		FinSi
+	Fin Mientras
+FinFuncion
+
+funcion cantidad_digitos ()
+	//	realizar un pseudocodigo que permitira mostrar un mensaje si la cantidad de digitos es mayor a la cantidad 
+//	de operadores matematicos "+","-","*","/" y parantesis dentro de una expresion matematicas que se ingresa caracter por caracter 
+	
+
+FinFuncion
+
+funcion pulsaciones()
+	//	elaborar un algoritmo tal,que dado un nombre y la edad en años .calcule el numero de pulsaciones que debe tener por Cada
+	//	segundo de ejercicio segun la edad de la persona. la formula de las pulsaciones es: pulsacion=(200-edad)/base.el valor de la base=10
+	//si es menor  de edad (<18)se aplica la formula con la base 10; sin es mayor de edad(>=18)la base se le decrementa en un 5%;si es adulto mayor
+	//	(>=65)la base se decrementa un 10%.para todos los casos las pulsaciones =(200-edad)/base.debe presentar la edad y las pulsaciones calculada
+	//y si es menor de edad, nayor de edad o adulto
+	Definir nombre Como Cadena
+	Definir edad, base Como Entero
+	Definir puls Como Real
+	
+	Escribir "Ingrese su nombre:"
+	Leer nombre
+	
+	Escribir "Ingrese su edad en años:"
+	Leer edad
+	
+	Si edad < 18 Entonces
+		base = 10
+	Sino Si edad >= 18 Y edad < 65 Entonces
+			base = 10 - (10 * 0.5)
+		Sino
+			base = 10 - (10 * 0.1)
+		FinSi
+		
+		puls = (200 - edad) / base
+		
+		Escribir "Nombre:", nombre
+		Escribir "Edad:", edad
+		
+		Si edad < 18 Entonces
+			Escribir "Categoría: Menor de edad"
+		Sino Si edad >= 18 Y edad < 65 Entonces
+				Escribir "Categoría: Mayor de edad"
+			Sino
+				Escribir "Categoría: Adulto mayor"
+			FinSi
+			
+			Escribir "Pulsaciones por segundo:", puls
+		FinSi
+	FinSi
+ 	
+FinFuncion
+
+funcion suma_cocientes()
+	//elaborar un seudocodigo que dado una serie de numeros presente la suma de los cocientes de los numeros pares y la suma de los
+	//	residuo de los numeros impares 
+	Definir serie, i, sumaC, sumaR como Entero
+    
+    Escribir "digite una serie de numeros:"
+    Leer serie
+    
+    sumaC = 0
+    sumaR= 0
+    
+    Para i = 1 Hasta serie Con Paso 1 Hacer
+        Si i mod 2 == 0 Entonces
+            sumaC = sumaC + i / 2;
+        Sino
+            sumaR= sumaR + i mod 2;
+        FinSi
+    FinPara
+    
+    Escribir "Suma de cocientes pares = ", sumaC
+    Escribir "Suma de residuos impares = ", sumaR
+
+	
+FinFuncion
+
+
+
+
+Algoritmo examen
+//	triangulo_estrella()
+//	expresion()
+	//	presentar()
+	//cantidad_digitos()
+	pulsaciones()
+	suma_cocientes()
+FinAlgoritmo
+	
